@@ -1,0 +1,62 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\title{Assignment 12: Papoulis Chapter 9 }
+\author{Dhatri Reddy}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{amsmath}
+\usepackage{romannum}
+\usepackage{enumitem}
+\setbeamertemplate{caption}[numbered]{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\logo{}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Problem 9.53}
+    \begin{enumerate}[label=(\alph*)]
+    \item  E\cbrak{y^{2}\brak{t}} if $y\brak{0} = y'\brak{0} = 0$ and $y''\brak{t} + 7y'\brak{t} + 10y\brak{t} = x\brak{t}$   $R_{x}\brak{\tau} = 5\delta\brak{\tau}$
+    \item E\cbrak{y^{2}\brak{n}} if $y\brak{-1} = y\brak{-2} = 0$ and $8y\brak{n} - 6y\brak{n-1} + y\brak{n-2} = x\brak{n}$    $R_{x}\brak{m} = 5\delta\brak{m}$
+    \end{enumerate}
+\end{block}
+\end{frame}
+
+\section{Solving a}
+\begin{frame}
+\frametitle{Solving a}
+If $y\brak{0} = y'\brak{0} = 0$ then y\brak{t} is the output of a system with input x\brak{t}U\brak{t} and impulse response h\brak{t} such that $h''\brak{t} + 7h'\brak{t} + 10h\brak{t} = \delta\brak{t}$
+
+$h\brak{0^{-}} = h\brak{0^{+}} = 0$\\
+$h\brak{t} = \dfrac{1}{3}\brak{e^{-2t} - e^{-5t}}U\brak{t}$ and with $q\brak{t} = 5U\brak{t}$ 
+$E\cbrak{y^{2}\brak{t}} = \int_{0}^t\brak{e^{-2t} - e^{-5t}}^{2}d\tau$
+
+\end{frame}
+
+\section{Solving b}
+\begin{frame}
+\frametitle{Solving b}
+If $y\brak{-1} = y'\brak{-2} = 0$ then y\brak{n} is the output of a system with input x\brak{n}U\brak{n} and delta response h\brak{n} such that $8h\brak{n} - 6h\brak{n-1} + h\brak{n-2} = \delta\brak{n}$
+
+$h\brak{-1} = h\brak{-2} = 0$\\
+$h\brak{n} = \brak{\dfrac{1}{2^{n+2}} - \dfrac{1}{2^{2n+3}}}U\brak{n}$ and with $q\brak{n} = 5U\brak{n}$ 
+$E\cbrak{y^{2}\brak{n}} = 5\Sigma^{n}_{k=0}\brak{\dfrac{1}{2^{n+2}} - \dfrac{1}{2^{2n+3}}}^{2}$
+
+\end{frame}
+
+\end{document}
